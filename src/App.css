@@ -1,44 +1,120 @@
-*{
-  outline:none;
-}
-.app {
-  padding: 30px;
-  height: 100vh;
-}
-
-button {
-  padding: 10px;
-  border-radius: 4px;
-  margin-left: 10px;
-  font-size: 15px;
-  background: cadetblue;
-  color: white;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
-.todo-list {
-  border-radius: 4px;
-  max-width: 500px;
-  margin: 0 auto;
-  border: 1px solid #e3e3e3;
-  padding: 15px 10px 30px;
+body {
+  background: #e2e2e2;
+}
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background: rgb(141, 158, 158);
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
 }
 
-.todo {
-  background: #fff;
-  padding: 20px 10px;
-  font-size: 12px;
-  margin-bottom: 6px;
-  border-radius: 3px;
+h1 {
+  margin: 32px 0;
+  color: black;
+  font-size: 24px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid white;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: black;
+}
+
+.todo-input::placeholder {
+  color: black;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid white;
+  background:cadetblue;
+  color:  black;
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid white;
+}
+
+.todo-button.edit {
+  background:cadetblue;
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: black;
+  background: white;
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.todo-row:nth-child(4n + 1) {
+  background: white;
+}
+
+.todo-row:nth-child(4n + 2) {
+  background:white;
+}
+
+.todo-row:nth-child(4n + 3) {
+  background:white;
+}
+
+.icons {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #e2e2e2;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-form input {
-  width: 100%;
-  padding: 20px 0px;
-  border-radius: 50px;
-  border: 1px solid #e3e3e3;
-  text-indent: 23px;
+.delete-icon {
+  margin-right: 5px;
+  color:  black;
+}
+
+.edit-icon {
+  color: black;
 }
